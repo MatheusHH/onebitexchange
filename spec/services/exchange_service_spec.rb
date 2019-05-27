@@ -1,6 +1,9 @@
+#require 'rails_helper'
 require 'spec_helper'
 require 'json'
 require './app/services/exchange_service'
+#Se vc mockar o webmock no rails helper não precisa importar o app/service, basta importar o rails helper
+#caso contrario, importe no spec helper e chama o path
 
 describe 'Currency' do
   it 'exchange' do
