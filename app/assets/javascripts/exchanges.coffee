@@ -16,9 +16,12 @@ $(document).ready ->
         return false;
       
 
-  $('#amount').on 'keyup', (e) ->
-  	e.preventDefault()
+  $('#amount').keyup ->
   	if $('form').attr('action') == '/convert'
+      conversion()
+
+  $('form').submit ->
+    if $('form').attr('action') == '/convert'
       conversion()
 
   $('.invert').click ->
